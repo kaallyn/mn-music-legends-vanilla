@@ -4,24 +4,28 @@
     <meta charset="utf-8">
     <title>MN Music Legends</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,700,800" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <link rel='stylesheet' href='style/main.css'>
-    <script src='scripts/app.js'></script>
+<!--     <script type="scripts/jquery-1.11.2.min.js"></script>
+    <script src='scripts/app.js'></script> -->
   </head>
   <body>
 
-    <section id='content'>
+    <div id='content'>
 
       <section class="hero">
-        <div class="hero-content">
-          <hgroup>
+        <div id='heroContent' class="hero-content">
+        <div class="hero-bg"> </div>
+          <hgroup id="headings">
             <h1>Explore Minnesota Music</h1>
-            <h2>Legends</h2>
+            <h2 id="headChange">Legends</h2>
+            <h2 id="princeHeader" class="hidden">Prince</h2>
           </hgroup>
-          <div class="hero-bg"> </div>
+          
         </div>
       </section>
 
-      <div class="artist-box">
+<!--       <div class="artist-box">
 
         <ul class="cl-effect-1">
           <li><a onClick = {this._handleClick.bind(this)}>Prince</a></li>
@@ -29,12 +33,12 @@
           <li><a onClick = {this._handleClick.bind(this)}>Bob Dylan</a></li>
           <div class='divider'></div>
         </ul>   
-      </div>
+      </div> -->
 
-      <div class="artist">
-        <p class="artist-header"> Prince </p>
+      <div id="artist" class="hidden">
+        <!-- <p class="artist-header"> Prince </p> -->
           <div class="c1">
-            <img clas="artist-img" src="img/image.jpg"/>
+            <img src="img/image.jpg" class="artist-img"/>
             <p class="artist-body"> Prince was one of the most naturally gifted artists of all time, and also one of the most mysterious. In the Eighties, at a time when other megastars such as Michael Jackson, Bruce Springsteen, and Madonna, were delivering an album every three years or so, Prince remained prolific to an almost inhuman degree. A byproduct of his inexhaustible output was Prince's tendency toward wayward, self-indulgent career moves (like changing his name to an unpronounceable symbol in the Nineties) that sometimes alienated even his most ardent supporters. </p>
 
             <div class="artist-footer">
@@ -51,8 +55,8 @@
                 <p><a href="https://vimeo.com/194308853">Prince and The Revolution - Let&#039;s Go Crazy</a> from <a href="https://vimeo.com/voicesfilm">Wes Candela &bull; voicesfilm.com</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
               </div>
             </div>
-            <div class="discography"> Discography
-              <ul>
+            <div class="discography"> Featured Albums
+              <ul class="album-list">
                 <li>
                 <img src="https://coverartarchive.org/release-group/628ce859-6d98-364f-9d91-b86f4cca6fb5/front.jpg" />
                 </li>
@@ -75,7 +79,20 @@
         </div>
       </div>
 
-    </section>
+      <footer class="sticky-footer">
+        <ul class="cl-effect-1">
+          <li id="prince-btn"><a>Prince</a></li>
+          <li id="replacements-btn"><a>The Replacements</a></li>
+          <li id="dylan-btn"><a>Bob Dylan</a></li>
+          
+        </ul>  
+      </footer>
+
+    </div>
+
+    <script>window.jQuery || document.write('<script src="scripts/jquery-1.11.2.min.js"><\/script>')</script>
+    <script src="scripts/app2.js"></script>     
+    <script src="scripts/jquery.viewportchecker.js"></script>
 
   </body>
 </html>
